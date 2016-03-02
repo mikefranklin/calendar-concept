@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Expires" content="-1">
+
+    <title>Calendar</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="fa/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="calendar.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="react.js" charset="utf-8"></script>
+    <script type="text/javascript" src="react-dom.js" charset="utf-8"></script>
+    <script type="text/javascript" src="react-bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="signals.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="immutable.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="calendar.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="content">
+    </div>
+    <script>
+      var app = new App()
+      ReactDOM.render(
+          React.createElement(Calendar, null),
+          document.getElementById("content"),
+          app.start.bind(app))
+    </script>
+  </body>
+</hmlt>

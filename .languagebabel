@@ -1,0 +1,9 @@
+{
+  "babelSourcePath": ".",
+  "babelTranspilePath": ".",
+  "createTranspiledCode": true,
+  "transpileOnSave": true,
+  "suppressTranspileOnSaveMessages": false,
+  "projectRoot": true,
+  "babelMapsAddUrl": false
+}

@@ -1,0 +1,36 @@
+.daygroup .useradd {
+  color: #ddd
+}
+
+.daygroup:hover .useradd {
+  color: blue
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.delete,
+.comment {
+  color: #ddd
+}
+
+.user:hover .delete {
+  color: red;
+  cursor:pointer;
+}
+
+.user:hover .comment {
+  color: green;
+  cursor: pointer;
+}
+
+.changemonth {
+  color: #ccc
+}
+
+.changemonth:hover {
+  color: blue;
+  cursor: pointer
+}
