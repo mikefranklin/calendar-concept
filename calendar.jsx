@@ -353,10 +353,16 @@ class User extends React.Component {
         super(props)
         this.state = Object.assign({}, props, {commentState: app.const.show.addButton})
         app.on.userCommentClicked.add( () => this.updateCommentState(app.const.show.addButton, null))
-        app.on.editableSet.add(value => this.setState({editable: value}))
+        app.on.editableSet.add(this.setEditable, this)
     }
     updateCommentState(value, text) {
         this.setState({commentState: value, newComment: text || ""})
+    }
+    componentWillUnmount() {
+        app.on.editableSet.remove(this.setEditable, this)
+    }
+    setEditable(value) {
+        this.setState({editable: value})
     }
     updateComment(event) {
         this.setState({newComment: event.target.value})

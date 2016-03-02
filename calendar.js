@@ -547,9 +547,7 @@ var User = function (_React$Component7) {
         app.on.userCommentClicked.add(function () {
             return _this8.updateCommentState(app.const.show.addButton, null);
         });
-        app.on.editableSet.add(function (value) {
-            return _this8.setState({ editable: value });
-        });
+        app.on.editableSet.add(_this8.setEditable, _this8);
         return _this8;
     }
 
@@ -557,6 +555,16 @@ var User = function (_React$Component7) {
         key: "updateCommentState",
         value: function updateCommentState(value, text) {
             this.setState({ commentState: value, newComment: text || "" });
+        }
+    }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+            app.on.editableSet.remove(this.setEditable, this);
+        }
+    }, {
+        key: "setEditable",
+        value: function setEditable(value) {
+            this.setState({ editable: value });
         }
     }, {
         key: "updateComment",
